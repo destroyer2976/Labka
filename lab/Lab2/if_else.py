@@ -2,7 +2,7 @@
 a = 50
 b = 10
 if a >b:
-  print("Hello World")
+    print("Hello World")
   
 #ex2
 a = 50
@@ -16,12 +16,12 @@ b = 10
 if a == b:
      print("Yes")
 else:
-  print("No")
+    print("No")
   
 #ex4
 a = 50
 b = 10
-if a ==b:
+if a == b:
      print("1")
 elif a >b:
     print("2")
@@ -29,8 +29,7 @@ else:
    print("3")
    
 #ex5
+c = 3
+d = 3
 if a == b and c == d:
     print("Hello")
-    
-#ex 6f6t
-    
