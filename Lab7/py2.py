@@ -1,9 +1,9 @@
 import pygame
 pygame.init()
 
-samaya= "C:\\Users\\Администратор\\Desktop\\Lab7\\egor-krid-samaya-samaya-mp3.mp3"
-pyala = "C:\\Users\\Администратор\\Desktop\Lab7\\aigel-pyyala-mp3.mp3"
-menkazakpyn = "C:\\Users\\Администратор\\Desktop\\Lab7\\1706164617_erbolat-kudajbergen-men-kazakpyn.mp3"
+samaya= "/Users/zasulan/fornastrgit/Lab7/egor-krid-samaya-samaya-mp3.mp3"
+pyala = "/Users/zasulan/fornastrgit/Lab7/aigel-pyyala-mp3.mp3"
+menkazakpyn = "/Users/zasulan/fornastrgit/Lab7/1706164617_erbolat-kudajbergen-men-kazakpyn.mp3"
 
 sc = pygame.display.set_mode((700, 700))
 pygame.display.set_caption("musi-zuzi")
@@ -13,8 +13,7 @@ index=0
 musiccaa = [samaya, pyala, menkazakpyn]
 pygame.mixer.music.load(musiccaa[index])
 pygame.mixer.music.play(0)
-
-puhlya = pygame.image.load("C:\\Users\\Администратор\\Desktop\\Lab7\\puhlya.png")
+puhlya = pygame.image.load("/Users/zasulan/fornastrgit/Lab7/puhlya.png")
 
 sc.blit(puhlya, (0, 0))
 play = False
