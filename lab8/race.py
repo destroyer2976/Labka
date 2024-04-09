@@ -16,8 +16,8 @@ font= pygame.font.SysFont("Verdana", 60)
 smallfont= pygame.font.SysFont("Verdana",20)
 gameov= font.render("Game Over", True, BLACK)
 
-backgr= pygame.image.load("/Users/zasulan/Downloads/fornastrgit/lab8/racer.py/AnimatedStreet.png")
-musika=pygame.mixer.Sound("/Users/zasulan/Downloads/fornastrgit/lab8/racer.py/background.wav").play()
+backgr= pygame.image.load("/Users/zasulan/Downloads/fornastrgit/lab8/AnimatedStreet.png")
+musika=pygame.mixer.Sound("/Users/zasulan/Downloads/fornastrgit/lab8/background.wav").play()
 SCREEN_WIDTH = 400
 SCREEN_HEIGHT = 600
 speed=5
@@ -32,7 +32,7 @@ pygame.display.set_caption("Game")
 class Enemy(pygame.sprite.Sprite):
       def __init__(self):
         super().__init__() 
-        self.image = pygame.image.load("/Users/zasulan/Downloads/fornastrgit/lab8/racer.py/Enemy.png")
+        self.image = pygame.image.load("/Users/zasulan/Downloads/fornastrgit/lab8/Enemy.png")
         self.rect = self.image.get_rect()
         self.rect.center=(random.randint(40,SCREEN_WIDTH-40),0) 
  
@@ -49,7 +49,7 @@ class Enemy(pygame.sprite.Sprite):
 class Player(pygame.sprite.Sprite):
     def __init__(self):
         super().__init__() 
-        self.image = pygame.image.load("/Users/zasulan/Downloads/fornastrgit/lab8/racer.py/Player.png")
+        self.image = pygame.image.load("/Users/zasulan/Downloads/fornastrgit/lab8//Player.png")
         self.rect = self.image.get_rect()
         self.rect.center = (160, 520)
  
@@ -70,7 +70,7 @@ class Player(pygame.sprite.Sprite):
 class coin(pygame.sprite.Sprite):
     def __init__(self):
         super().__init__()
-        yoyimage = pygame.image.load("/Users/zasulan/Downloads/fornastrgit/lab8/racer.py/coin.jpeg")
+        yoyimage = pygame.image.load("/Users/zasulan/Downloads/fornastrgit/lab8/coin.jpeg")
         self.image = pygame.transform.scale(yoyimage, (45, 45))
         self.rect= self.image.get_rect()
         self.rect.center = (random.randint(40,SCREEN_WIDTH-40),0)
@@ -118,7 +118,7 @@ while True:
         DISPLAYSURF.blit(entity.image, entity.rect)
         entity.move()
     if pygame.sprite.spritecollideany(P1,coinies):
-       pygame.mixer.Sound("/Users/zasulan/Downloads/fornastrgit/lab8/racer.py/collect-5930.mp3").play()
+       pygame.mixer.Sound("/Users/zasulan/Downloads/fornastrgit/lab8/collect-5930.mp3").play()
     
        for bonus in coinies:
         bonus.rect.top =0
@@ -137,7 +137,7 @@ while True:
         pass
 
     if pygame.sprite.spritecollideany(P1,enemies):
-        pygame.mixer.Sound('/Users/zasulan/Downloads/fornastrgit/lab8/racer.py/crash.wav').play()
+        pygame.mixer.Sound('/Users/zasulan/Downloads/fornastrgit/lab8/crash.wav').play()
         time.sleep(0.5)
 
         DISPLAYSURF.fill(RED)
