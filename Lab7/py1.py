@@ -6,10 +6,10 @@ pygame.init()
 WHITE = (255, 255, 255)
 w, h = 800, 700
 scr = pygame.display.set_mode((w, h), pygame.RESIZABLE)
-main_image = pygame.image.load('C:\\Users\\Администратор\\Desktop\\Lab7\\mclock.png')
+main_image = pygame.image.load('/Users/zasulan/Downloads/fornastrgit/Lab7/mclock.png')
 image = pygame.transform.scale(main_image, (w, h))
-minute_arrow_image = pygame.image.load("C:\\Users\\Администратор\\Desktop\\Lab7\\mrh.png")
-second_arrow_image = pygame.image.load("C:\\Users\\Администратор\\Desktop\\Lab7\\mlh.png")
+minute_arrow_image = pygame.image.load("/Users/zasulan/Downloads/fornastrgit/Lab7/mrh.png")
+second_arrow_image = pygame.image.load("/Users/zasulan/Downloads/fornastrgit/Lab7/mlh.png")
 
 def resize_arrows(new_width, new_height):
     global minute_arrow_image, second_arrow_image
@@ -41,8 +41,8 @@ while True:
     minute = now.minute
     second = now.second
 
-    minute_rotation_angle = -(minute * 6) - 270
-    second_rotation_angle = -(second * 6) - 270
+    minute_rotation_angle = -(minute * 60) -270
+    second_rotation_angle = -(second * 60) - 270
 
 
     minute_rotation_angle = prev_minute_rotation_angle + (minute_rotation_angle - prev_minute_rotation_angle) * 0.05

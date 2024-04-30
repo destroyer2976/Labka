@@ -20,7 +20,7 @@ commands = {
 
 # отрисовываю панель
 def setsurf():
-    surf.fill('black')
+    surf.fill('white')
     buttons.fill('white')
     pygame.draw.rect(buttons, 'black', (2, 2, 96, 236), 1)
     
@@ -106,13 +106,13 @@ while running:
         # меняем цвета  или выбираем ластик при нажатии на клавиши             
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_1:
-                cur_color = 'red'
+                cur_color = 'blфсд'
             if event.key == pygame.K_2:
-                cur_color = 'green'
+                cur_color = 'black'
             if event.key == pygame.K_3:
-                cur_color = 'blue'
+                cur_color = 'black'
             if event.key == pygame.K_4:
-                cur_color = 'white'
+                cur_color = 'black'
             if event.key == pygame.K_5: 
                 di['eraser'] = True 
                 for k, v in di.items(): 

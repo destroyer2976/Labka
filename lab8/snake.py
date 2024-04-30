@@ -2,7 +2,8 @@ import pygame
 import time
 import random
 
-snake_speed = 15
+snake_speed = 10
+
 
 # размер окна
 window_x = 720
@@ -143,8 +144,11 @@ while True :
     if snake_position[0] == fruit_position[0] and snake_position[1] == fruit_position[1] :
         score += 10
         fruit_spawn = False
+        
+
     else :
-        snake_body.pop()
+        
+         snake_body.pop()
 
     if not fruit_spawn :
         fruit_position = [random.randrange(1, (window_x // 10)) * 10,
@@ -154,7 +158,7 @@ while True :
     game_window.fill(black)
 
     for pos in snake_body :
-        pygame.draw.rect(game_window, green,
+        pygame.draw.rect(game_window, red,
                          pygame.Rect(pos[0], pos[1], 10, 10))
     pygame.draw.rect(game_window, white, pygame.Rect(
         fruit_position[0], fruit_position[1], 10, 10))

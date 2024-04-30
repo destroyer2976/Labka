@@ -18,8 +18,8 @@ gameov= font.render("Game Over", True, BLACK)
 
 backgr= pygame.image.load("/Users/zasulan/Downloads/fornastrgit/Amira/AnimatedStreet — копия.png")
 musika=pygame.mixer.Sound("/Users/zasulan/Downloads/fornastrgit/Amira/background — копия.wav").play()
-SCREEN_WIDTH = 400
-SCREEN_HEIGHT = 600
+SCREEN_WIDTH = 800
+SCREEN_HEIGHT = 1000
 speed=5
 score=0
 count=0

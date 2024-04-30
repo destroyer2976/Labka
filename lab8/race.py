@@ -127,14 +127,13 @@ while True:
 
     pygame.display.flip()
 
-    collision_found = False
+   
     for enemy in enemies:
-        if pygame.sprite.spritecollideany(enemy, coinies):
-           collision_found = True
-           break 
-
-    if not collision_found:
-        pass
+        if pygame.sprite.spritecollideany(C1, enemies):
+             C1.rect.top = 0
+        C1.rect.center = (random.randint(40, SCREEN_WIDTH- 40), 0)
+          
+        
 
     if pygame.sprite.spritecollideany(P1,enemies):
         pygame.mixer.Sound('/Users/zasulan/Downloads/fornastrgit/lab8/crash.wav').play()
